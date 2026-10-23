@@ -1,0 +1,234 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  }
+  h1, h2, h3, h4, .font-display {
+    font-family: 'Outfit', 'Plus Jakarta Sans', sans-serif;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.97);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes pop3d {
+  0% {
+    transform: scale(0.2) translateY(30px) rotateX(-38deg);
+    opacity: 0;
+  }
+  65% {
+    transform: scale(1.15) translateY(-8px) rotateX(-38deg);
+    opacity: 1;
+  }
+  85% {
+    transform: scale(0.95) translateY(2px) rotateX(-38deg);
+  }
+  100% {
+    transform: scale(1) translateY(-2px) rotateX(-38deg);
+    opacity: 1;
+  }
+}
+
+.animate-pop-3d {
+  animation: pop3d 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.2s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+
+
+/* Custom smooth scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: rgba(28, 25, 23, 0.6);
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(217, 119, 6, 0.5);
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(217, 119, 6, 0.8);
+}
+
+/* ==========================================================================
+   3D GLOSSY CASUAL GAME GUI STYLES (Matching Reference Image)
+   ========================================================================== */
+
+/* 1. Cream 3D Card Panels with Colored Headers & Golden Bevels */
+.gui-card-blue {
+  background-color: #FFFDF5;
+  border: 4px solid #2563EB;
+  box-shadow: 0 8px 0 #1D4ED8, 0 12px 24px rgba(0, 0, 0, 0.45);
+  border-radius: 28px;
+  position: relative;
+}
+
+.gui-card-gold {
+  background-color: #FFFDF5;
+  border: 4px solid #EAB308;
+  box-shadow: 0 8px 0 #B45309, 0 12px 24px rgba(0, 0, 0, 0.45);
+  border-radius: 28px;
+  position: relative;
+}
+
+/* 2. Glossy Ribbon Header Banners */
+.gui-ribbon-blue {
+  background: linear-gradient(180deg, #38BDF8 0%, #2563EB 60%, #1D4ED8 100%);
+  color: #FFFFFF;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+  box-shadow: inset 0 2px 0 rgba(255, 255, 255, 0.5), 0 4px 10px rgba(0, 0, 0, 0.35);
+  border: 2px solid #60A5FA;
+}
+
+.gui-ribbon-gold {
+  background: linear-gradient(180deg, #FDE047 0%, #EAB308 60%, #CA8A04 100%);
+  color: #451A03;
+  text-shadow: 0 1px 2px rgba(255, 255, 255, 0.6);
+  box-shadow: inset 0 2px 0 rgba(255, 255, 255, 0.6), 0 4px 10px rgba(0, 0, 0, 0.35);
+  border: 2px solid #FEF08A;
+}
+
+/* 3. Glossy 3D Pill Buttons (Interactive) */
+.gui-btn {
+  position: relative;
+  display: inline-flex;
+  items-center: center;
+  justify-content: center;
+  font-weight: 900;
+  border-radius: 16px;
+  transition: all 0.12s ease-out;
+  cursor: pointer;
+  user-select: none;
+  overflow: hidden;
+}
+
+/* Shiny White Curved Top Highlight */
+.gui-btn::after {
+  content: '';
+  position: absolute;
+  top: 2px;
+  left: 8px;
+  right: 8px;
+  height: 38%;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.55) 0%, rgba(255, 255, 255, 0.05) 100%);
+  border-radius: 12px 12px 6px 6px;
+  pointer-events: none;
+}
+
+.gui-btn-blue {
+  background: linear-gradient(180deg, #38BDF8 0%, #2563EB 65%, #1D4ED8 100%);
+  border: 2px solid #93C5FD;
+  box-shadow: 0 6px 0 #1E40AF, 0 8px 12px rgba(0, 0, 0, 0.35);
+  color: #FFFFFF;
+  text-shadow: 0 2px 3px rgba(0, 0, 0, 0.4);
+}
+.gui-btn-blue:hover {
+  filter: brightness(1.08);
+  transform: translateY(-1px);
+}
+.gui-btn-blue:active {
+  transform: translateY(4px);
+  box-shadow: 0 2px 0 #1E40AF, 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.gui-btn-green {
+  background: linear-gradient(180deg, #4ADE80 0%, #16A34A 65%, #15803D 100%);
+  border: 2px solid #86EFAC;
+  box-shadow: 0 6px 0 #14532D, 0 8px 12px rgba(0, 0, 0, 0.35);
+  color: #FFFFFF;
+  text-shadow: 0 2px 3px rgba(0, 0, 0, 0.4);
+}
+.gui-btn-green:hover {
+  filter: brightness(1.08);
+  transform: translateY(-1px);
+}
+.gui-btn-green:active {
+  transform: translateY(4px);
+  box-shadow: 0 2px 0 #14532D, 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.gui-btn-red {
+  background: linear-gradient(180deg, #FB7185 0%, #E11D48 65%, #BE123C 100%);
+  border: 2px solid #FECDD3;
+  box-shadow: 0 6px 0 #881337, 0 8px 12px rgba(0, 0, 0, 0.35);
+  color: #FFFFFF;
+  text-shadow: 0 2px 3px rgba(0, 0, 0, 0.4);
+}
+.gui-btn-red:hover {
+  filter: brightness(1.08);
+  transform: translateY(-1px);
+}
+.gui-btn-red:active {
+  transform: translateY(4px);
+  box-shadow: 0 2px 0 #881337, 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.gui-btn-gold {
+  background: linear-gradient(180deg, #FDE047 0%, #EAB308 65%, #CA8A04 100%);
+  border: 2px solid #FEF08A;
+  box-shadow: 0 6px 0 #854D0E, 0 8px 12px rgba(0, 0, 0, 0.35);
+  color: #FFFFFF;
+  text-shadow: 0 2px 3px rgba(69, 26, 3, 0.6);
+}
+.gui-btn-gold:hover {
+  filter: brightness(1.08);
+  transform: translateY(-1px);
+}
+.gui-btn-gold:active {
+  transform: translateY(4px);
+  box-shadow: 0 2px 0 #854D0E, 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* 4. Glossy Rounded Badges (Square & Circle) */
+.gui-badge-square {
+  border-radius: 18px;
+  border: 3px solid #FDE047;
+  box-shadow: 0 4px 0 #A16207, 0 6px 10px rgba(0,0,0,0.3);
+  position: relative;
+  overflow: hidden;
+}
+.gui-badge-square::after {
+  content: '';
+  position: absolute;
+  top: 1px;
+  left: 4px;
+  right: 4px;
+  height: 35%;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0) 100%);
+  border-radius: 12px 12px 4px 4px;
+  pointer-events: none;
+}
+
+.gui-badge-circle {
+  border-radius: 9999px;
+  border: 3px solid #FDE047;
+  box-shadow: 0 4px 0 #A16207, 0 6px 10px rgba(0,0,0,0.3);
+  position: relative;
+  overflow: hidden;
+}
+.gui-badge-circle::after {
+  content: '';
+  position: absolute;
+  top: 2px;
+  left: 20%;
+  right: 20%;
+  height: 35%;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.55) 0%, rgba(255, 255, 255, 0) 100%);
+  border-radius: 9999px;
+  pointer-events: none;
+}

@@ -1,0 +1,6 @@
+{
+  "name": "Monopoli Budaya Nusantara",
+  "description": "Permainan papan Monopoli edukatif bertemakan keragaman budaya dan rumah adat seluruh penjuru Nusantara dengan pion Adat Kudus, kuis kebudayaan, dan mode Smart TV.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

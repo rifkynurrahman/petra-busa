@@ -1,0 +1,13 @@
+==================================================
+🎵 FOLDER AUDIO / MUSIK LATAR (BGM)
+==================================================
+
+Taruh file musik Anda di dalam folder ini dengan nama:
+  bgm.mp3
+
+(Mendukung format: .mp3, .ogg, .wav, .m4a)
+
+Alternatif lebih mudah:
+Anda juga bisa langsung kirim / upload file audio musik Anda 
+lewat chat ke saya! File yang dikirim di chat akan otomatis
+terdeteksi dan langsung saya pasang ke dalam gamenya.
