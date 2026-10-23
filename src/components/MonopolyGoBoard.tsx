@@ -141,7 +141,7 @@ export const MonopolyGoBoard: React.FC<MonopolyGoBoardProps> = ({
             >
               {/* PETRA BUSA Logo */}
               <img
-                src="/assets/aistudio/Untitled_design__30__632c093e.png"
+                src="/assets/aistudio/logo.png"
                 alt="PETRA BUSA"
                 className="w-36 sm:w-56 md:w-72 max-w-full h-auto object-contain mix-blend-multiply select-none filter drop-shadow-[0_4px_14px_rgba(0,0,0,0.18)] pointer-events-none"
               />
